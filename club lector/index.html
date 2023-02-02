@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Lector | Lectura social en línia</title>
+    <meta name="description" content="Clubs de lectura virtual de tots els gèneres per als amants de la lectura que vulguin debatre a distància sobre els llibres que els interessen.">
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+<body>
+    <div class="content">
+        <a href="#main" class="sr">Salta al contingut principal</a>
+        <header>
+            <div class="logo">
+                <a href="index.html"><h1><span>club</span><span>lector</span></h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Clubs temàtics</a></li>
+                    <li><a href="">Lectures 2020</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <a href="">Inicia sessió</a>
+            </div>
+        </header>
+        <main id="main">
+            <div class="container">
+                <section>
+                    <h2>Què és Club Lector?</h2>
+                    <p>Club Lector organitza clubs de lectura virtual de diversos gèneres i en diferents llengües, per als amants de la lectura que vulguin compartir reflexions i debatre sobre els llibres que els interessen sense necessitat d'haver d'anar a un espai físic.</p>
+                </section>
+                <section>
+                    <h2>Com funciona?</h2>
+                    <div class="flexContainer">
+                        <div>
+                            <img src="img/howto-register.png" alt="" width="512" height="512" class="imgFluid">
+                            <p>Registra't</p>
+                        </div>
+                        <div>
+                            <img src="img/howto-club.png" alt="" width="512" height="512" class="imgFluid">
+                            <p>Inscriu-te en un club de lectura</p>
+                        </div>
+                        <div>
+                            <img src="img/howto-book.png" alt="" width="512" height="512" class="imgFluid">
+                            <p>Tria un llibre</p>
+                        </div>
+                        <div>
+                            <img src="img/howto-speech.png" alt="" width="512" height="512" class="imgFluid">
+                            <p>Gaudeix del debat</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Uneix-te al club</h2>
+                    <div class="flexContainerForm">
+                        <div class="lemaForm">
+                            <p>Estem llegint el teu proper llibre favorit. T'ho perdràs?</p>
+                        </div>
+                        <div class="form">
+                            <p class="required">Tots els camps del formulari són obligatoris</p>
+                            <form action="#" method="POST" autocomplete="off" id="registro">
+                                <div>
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom" value=""  required>
+                                </div>
+                                <div>
+                                    <label for="cognoms">Cognoms</label>
+                                    <input type="text" id="cognoms" name="cognoms" value="" required>
+                                </div>
+                                <div>
+                                    <label for="correu">Correu electrònic</label>
+                                    <input type="email" id="correu" name="email" value="" required>
+                                </div>
+                                <div>
+                                    <label for="contrasenya">Contrasenya </label>
+                                    <input type="password" id="contrasenya" name="password" value="" required>
+                                    <span class="indicacionesPassword">(debe contener un mínimo de 8 caracteres entre los cuales debe haber al menos una máyuscula y un número )</span>
+                                </div>
+                                <div>
+                                    <label for="genere">Quins gèneres literaris t'interessen</label>
+                                    <select name="genere" id="genere" required>
+                                        <option value="">Seleciona una opció de la llista</option>
+                                        <option value="Novel·la">Novel·la</option>
+                                        <option value="Poesia">Poesia</option>
+                                        <option value="Ciència ficció">Ciència ficció</option>
+                                        <option value="Teatre">Teatre</option>
+                                    </select>
+                                </div>
+    
+                                <div class="outFieldset">
+                                    <p class="infoLegal">INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE <b>CLUB LECTOR</b>. <b>Finalitats</b>: recollida de dades per a la inscripció com a soci de l'interessat. <b>Legitimació</b>: Consentiment de l'interessat. <b>Destinataris:</b> No estan previstes cessions de dades a tercers, excepte obligació legal. <b>Drets</b>: Pot retirar el seu consentiment en qualsevol moment, així com accedir, rectificar, suprimir les seves dades i altres drets dirigint-se a clublector@clublector.org. <b>Informació Addicional</b>: Pot ampliar la informació en l'enllaç d'<a href="">Avís Legal</a> i <a href="">Política de privacitat</a>.</p>
+                                    <div>
+                                        <input type="checkbox" name="politica" id="politica" value="Acceptacio de política i avís" required >
+                                        <label for="politica">He llegit i accepto la política de privacitat</label>
+                                    </div>
+                                    <input type="submit" value="Registra'm">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footerFlex">
+            <ul>
+                <li><a href="">Sobre nosaltres</a></li>    
+                <li><a href="">Avís legal</a></li>
+                <li><a href="">Política de privacitat</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Youtube</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2022 Jennifer López Montero</p>
+        <p>Icones <a href="https://www.flaticon.com/">flaticon.com</a></p>
+        <div class="goTop">
+            <a href="#main">&xwedge;</a>
+        </div>       
+    </footer>
+    
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/messages_ca.min.js"></script>
+    <script>
+        jQuery.validator.addMethod("contrasenya",
+        function(value, element){
+            return /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/.test(value);
+            }
+        );
+        $().ready(function() {
+            $("#registro").validate({
+                debug: true,
+                rules: {
+                    nom: "required",
+                    cognoms: "required",
+                    email: {
+                        required: true,
+                        email:true
+                    },
+                    password: {
+                        required: true,
+                        contrasenya: true
+                    },
+                    genere: "required",
+                    politica: "required",
+                },
+                messages: {
+                        password: "No és una contrasenya valida"
+                    },
+                errorPlacement: function(error, element){
+                    if(element.is(":checkbox")){
+                        error.appendTo(element.parent("div"));
+                    }else{
+                        error.insertAfter(element);
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>
+

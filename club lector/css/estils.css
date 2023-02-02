@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Selectors necessaris per preparar un sticky footer*/
+html, body {
+    height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+
+/**************************
+Selectors de tipus
+***************************/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font: 400 16px/1.6 'Merriweather', serif;
+    background-color: rgb(245, 246, 240);
+    color: rgb(2, 15, 20);
+    /* Les dues últimes propietats en aquesta regla són necessàries per crear un sticky footer*/
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+/*Canvi de disseny: breakpoint en 768 píxels per augmentar la mida de titulars i paràgrafs quan el dispositiu disposi de 768 píxels o més*/
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/*Classe per aconseguir que les imatges adaptin la seva mida al contenidor*/
+.imgFluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Classe per amagar un element i que sigui només visible als lectors de pantalla*/
+.sr {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+/**************************
+Contingut del header i
+del menú de navegació
+***************************/
+/* Header */
+header {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+header a {
+    color: rgb(2, 15, 20);
+    text-decoration: none;
+}
+header a:hover {
+    color: rgba(2, 15, 20, 0.5);
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+h1 span:last-child {
+    font-weight: 400;
+    font-style: italic;
+}
+/* Menú de navegació i botó d'inici de sessió */
+nav {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+nav ul {
+    list-style-type: none;
+}
+.login {
+    order: -1;
+}
+.login a {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 80, 50);
+    color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+.login a:hover {
+    color: rgb(2, 15, 20);
+}
+/*Canvi de disseny: breakpoint en 768 píxels */
+@media (min-width: 768px) {
+    header {
+        padding-top: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .login {
+        order: 0;
+    }
+    h1 {
+        margin-top: 0;
+        line-height: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+}
+
+/**************************
+Contingut principal de la
+pàgina
+***************************/
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+section:first-child {
+    width: 100%;
+}
+.flexContainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+section:last-child {
+    margin-top: 80px;
+}
+/*Canvi de disseny: breakpoint en 768 píxels */
+@media (min-width: 768px) {
+    section:first-child {
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flexContainer {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .flexContainer div {
+        flex-basis: 15%;
+    }
+}
+
+/**************************
+Contingut del footer
+***************************/
+footer {
+    padding: 50px 15px 30px 15px;
+    background-color: rgb(67, 58, 68);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(255, 255, 255);
+    /*Aquesta propietat és necessària per a preparar el sticky footer*/
+    flex-shrink: 0;
+}
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+footer a:hover {
+    color: rgb(255, 80, 50);
+}
+footer ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+footer p {
+    margin-bottom: 0;
+}
+.goTop {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+}
+/*Canvi de disseny: breakpoint en 768 píxels */
+@media (min-width: 768px) {
+    footer p {
+        text-align: left;
+        font-size: 1rem;
+    }
+    .footerFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer ul {
+        display: flex;
+    }
+    footer ul li::after {
+        content: "·";
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    footer ul li:last-child::after {
+        content:"";
+        padding: 0;
+    }
+}
+
+/**************************
+Estils per a la secció
+del formulari
+***************************/
+.flexContainerForm {
+    width: 100%;
+}
+.lemaForm {
+    width: 100%;
+}
+.lemaForm p {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.required {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    background-image: url('../img/information-button.svg');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    text-align: left;
+}
+form a {
+    color: rgb(255, 80, 50);
+    text-decoration: none;
+}
+form a:hover {
+    text-decoration: underline;
+}
+form {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-align: left;
+}
+form div {
+	margin-bottom: 1rem;
+}
+input, select {
+    border: 1px solid #000;
+	padding: 5px;
+	font-size: 1.1rem;
+}
+input, select {
+	width: 100%;
+    background-color: #fff;
+}
+input[type="checkbox"] {
+	width: auto;
+}
+input[type="checkbox"]+label {
+    display: inline;
+}
+input:focus {
+    background-color: rgba(255, 80, 50, 0.2);
+}
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px 30px;
+    background-color: rgba(255, 80, 50, 1);
+    color: rgb(255,255,255);
+    border: none;
+    text-transform: uppercase;
+    -webkit-appearance: none; 
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: rgba(2, 15, 20);
+}
+.infoLegal, label[for="politica"] {
+    font-size: 0.65rem;
+    text-align: left;
+}
+@media (min-width: 992px) {
+    .lemaForm p {
+        font-size: 2rem;
+    }
+    .flexContainerForm {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .flexContainerForm div {
+        flex-basis: 40%;
+    }
+}
+/* Mensajes de error de validación */
+label.error {
+	color: rgb(255, 0, 123);
+}
+label.error:before {
+	content: '* ';
+}
+input.error {
+	border:1px solid #F00;
+}
+
+/* Indicaciones sobre los parametros de la contraseña */
+.indicacionesPassword {
+    font-size: .8rem;
+    color: rgba(85, 80, 80, 0.7);
+}
+
