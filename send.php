@@ -58,7 +58,6 @@ try {
     $mail->Body = $body;
     $mail->CharSet = 'UTF-8';
     $mail->send();
-        echo "Su informacion se ha enviado correctamente";
         header("Location:../feedback.php");
     }
     
