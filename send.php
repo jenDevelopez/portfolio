@@ -58,7 +58,7 @@ try {
     $mail->Body = $body;
     $mail->CharSet = 'UTF-8';
     $mail->send();
-        header("Location: feedback.php");
+        header("Location: /feedback.php");
     }
     
     catch(Exception $e) {
