@@ -45,7 +45,7 @@ try {
         $mail->SMTPAuth = true;
         $mail->Username = 'developez.eu@gmail.com';
         $mail->Password = 'pmvm bgtv lwao xgfu';
-        $mail->tsl;
+        $mail->PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 587;
 
     //Envio
