@@ -50,7 +50,7 @@ try {
 
     //Envio
     $mail->setFrom('developez.eu@gmail.com', 'Developez');
-    $mail->addAddress('jen1992lo@gmail.com');
+    $mail->addAddress('developez.eu@gmail.com');
     $mail->isHTML(true);
 
     //Formato HTML del mensaje
